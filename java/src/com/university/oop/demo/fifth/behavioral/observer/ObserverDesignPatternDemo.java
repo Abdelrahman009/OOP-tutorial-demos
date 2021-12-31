@@ -7,7 +7,6 @@ package com.university.oop.demo.fifth.behavioral.observer;
  *  between objects so that when one object changes state, all
  *  its dependents are notified and updated automatically."
  *
- *
  *  Let's imagine that we are writing a code for some service
  *  that notifies unemployed engineers with jobs they are interested
  *  in.
@@ -25,6 +24,16 @@ public class ObserverDesignPatternDemo {
          *
          * Should we run a background thread that asks the jobs for their
          * availability every 5 seconds for example? "Poll model"
+         *
+         * a wasteful approach
+         *
+         * new thread that does the following:
+         * while (true) {
+         *    sleep for a couple of seconds.
+         *    check if a job available.
+         *    if so take an action.
+         *    else continue the loop
+         * }
          *
          * How about notifying those engineers when the job status changes?
          */

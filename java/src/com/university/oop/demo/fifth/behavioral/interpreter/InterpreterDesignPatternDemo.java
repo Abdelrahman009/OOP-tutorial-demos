@@ -46,7 +46,7 @@ public class InterpreterDesignPatternDemo {
             + " Debra(15 years of experience), Top Level Manager Luke(30 years of experience)."
             + " Development Team has members Computer Engineer Martin(8 years of experience).";
 
-        Company company = new Company(description);
+        OrganizationalUnit company = new Company(description);
         System.out.println(company.getSummary());
     }
 }

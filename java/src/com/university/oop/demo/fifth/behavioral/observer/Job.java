@@ -6,12 +6,12 @@ import java.util.Set;
 public class Job implements ObservableJob {
     private Set<AvailableJobObserver> availableJobObserverSet;
     private boolean jobStatus;
-    private String position;
+    private String jobTitle;
 
-    public Job(String position, boolean isJobAvailable) {
+    public Job(String jobTitle, boolean isJobAvailable) {
         this.availableJobObserverSet = new HashSet<>();
         this.jobStatus = isJobAvailable;
-        this.position = position;
+        this.jobTitle = jobTitle;
     }
 
     @Override
@@ -25,8 +25,8 @@ public class Job implements ObservableJob {
     }
 
     @Override
-    public String getPosition() {
-        return position;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
     public void setIsJobAvailable(boolean jobStatus) {
@@ -35,5 +35,9 @@ public class Job implements ObservableJob {
             for (AvailableJobObserver observer : availableJobObserverSet) {
                 observer.notify(this);
             }
+    }
+
+    public boolean isJobStatus() {
+        return jobStatus;
     }
 }

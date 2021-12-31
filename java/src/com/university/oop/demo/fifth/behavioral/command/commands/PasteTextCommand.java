@@ -8,7 +8,7 @@ public class PasteTextCommand implements Command {
     private Document document;
 
     public PasteTextCommand
-            (int pastingIndex, String pastedString, Document document) {
+         (int pastingIndex, String pastedString, Document document) {
 
         this.pastingIndex = pastingIndex;
         this.pastedString = pastedString;

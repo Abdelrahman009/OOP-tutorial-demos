@@ -12,7 +12,7 @@ public class Engineer implements AvailableJobObserver {
     @Override
     public void notify(ObservableJob job) {
         if (! isEmployed)
-            System.out.println("Engineer " + name + " applying for job " + job.getPosition());
+            System.out.println("Engineer " + name + " applying for job " + job.getJobTitle());
     }
 
     public void setEmployed(boolean isEmployed) {
